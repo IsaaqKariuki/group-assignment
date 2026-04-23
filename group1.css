@@ -1,0 +1,26 @@
+h1{text-align: center;}
+.bio{
+    border: 5px black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h2{text-align: center;}
+.bio{
+    border: 5px black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h3{text-align: center;}
+.bio{
+    border: 5px black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+img{
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 125px;
+}
+p {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}

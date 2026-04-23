@@ -19,6 +19,13 @@ img{
     margin: 0 auto;
     border-radius: 125px;
 }
+button{
+    text-align: center;
+}
+.button-container {
+    display: flex;
+    gap: 20px; /* controls space between buttons */
+}
 p {
   max-width: 600px;
   margin: 0 auto;

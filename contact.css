@@ -1,0 +1,113 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy:      #1e2a3a;
+  --navy-dk:   #141e2b;
+  --accent:    #4f6ef7;
+  --green:     #34c98a;
+  --gray-50:   #f8f9fb;
+  --gray-100:  #eef0f4;
+  --gray-400:  #9aa3b2;
+  --gray-700:  #4b5563;
+  --white:     #ffffff;
+  --red:       #e05252;
+  --radius:    14px;
+  --shadow:    0 4px 24px rgba(30, 42, 58, 0.08);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--white);
+  color: var(--navy);
+}
+
+/* ── CONTACT CARDS SECTION ── */
+.contact-section {
+  padding: 4rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: var(--navy);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-100);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(30, 42, 58, 0.13);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.icon-email    { background: #eef1fe; color: var(--accent); }
+.icon-phone    { background: #e6faf3; color: var(--green); }
+.icon-linkedin { background: #e8effe; color: #3b5fc0; }
+.icon-github   { background: var(--navy); color: var(--white); }
+
+.card-label {
+  font-size: 0.78rem;
+  color: var(--gray-400);
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.card-value {
+  font-size: 0.97rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+/* ── FORM SECTION ── */
+
+/* ── TOAST ── */
+
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .form-row  { grid-template-columns: 1fr; }
+  .btn-row   { flex-direction: column; }
+  .btn       { width: 100%; text-align: center; }
+}

@@ -1,30 +1,71 @@
-h1{text-align: center;}
-.bio{
-    border: 5px black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+*{
+    margin: 5px;;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
 }
-h2{text-align: center;}
-.bio{
-    border: 5px black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body{
+    background: linear-gradient(to right, #07142c, #10264d);
+    height:100vh;
+    justify-content:center;
+    align-items:center;
 }
-h3{text-align: center;}
-.bio{
-    border: 5px black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+h1{text-align: center;
+    color: white;
+}
+h2{text-align: center;
+    color: white;
+}
+.image-container {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical (optional) */
 }
 img{
     width: 250px;
-    display: block;
     margin: 0 auto;
     border-radius: 125px;
-}
-button{
-    text-align: center;
+    border:6px solid white;
+    margin-bottom:25px;
 }
 .button-container {
     display: flex;
     gap: 20px; /* controls space between buttons */
+    flex-wrap: nowrap;   /* prevents wrapping */
+  overflow-x: auto;    /* allows scroll if needed */
+  white-space: nowrap;
+  
+}
+button{
+    background-color: rgb(98, 98, 235);
+    color: white;
+    border-radius: 250px;
+    border: 0;
+    height: 5vh; 
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #6c79ff, #9f5cff, #00d4ff);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+button:hover::before {
+  opacity: 1;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 p {
   max-width: 600px;

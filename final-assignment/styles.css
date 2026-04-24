@@ -94,6 +94,7 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   height: var(--navbar-h);
   background: var(--white);
   border-bottom: 1px solid var(--border);
+  transition: background 0.5s ease, border-color 0.5s ease;
 }
 
 .navbar__inner {
@@ -140,6 +141,46 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   background: var(--navy);
   border-radius: var(--radius-full);
   transition: transform var(--transition), opacity var(--transition);
+}
+
+/* CV download button — styled differently to stand out from the plain links */
+.navbar__cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white) !important;
+  background: var(--blue);
+  padding: 7px 16px;
+  border-radius: var(--radius-full);
+  transition: background var(--transition), transform var(--transition);
+}
+ 
+.navbar__cv-btn:hover {
+  background: var(--navy);
+  transform: translateY(-1px);
+}
+
+/* Dark/light mode toggle button — the sun/moon icon button */
+.navbar__theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.9rem;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+  cursor: pointer;
+}
+ 
+.navbar__theme-toggle:hover {
+  background: var(--blue-pale);
+  transform: rotate(20deg); /* slight spin on hover for a playful feel */
 }
 
 /* ── 4. Hero section — from group1.css ─────────────────────── */
@@ -250,6 +291,7 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   gap: 1.5rem;
   flex-wrap: wrap;
   margin-top: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,background 0.5s ease;
 }
 
 /* Original: .card { background:#fff; padding:25px; width:420px; border-radius:15px;
@@ -483,6 +525,7 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 .footer {
   background: var(--navy);
   padding: 1.75rem 0;
+  transition: background 0.5s ease;
 }
 
 .footer__inner {
@@ -535,4 +578,40 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 
   .footer__inner   { flex-direction: column; text-align: center; }
   .footer__links   { justify-content: center; }
+}
+
+/* =====================================================
+ DARK MODE (optional) 
+===================================================== */
+[data-theme="dark"] {
+  --navy:       #e2e8f0;   /* text becomes light coloured */
+  --navy-dk:    #0f172a;
+  --blue:       #60a5fa;
+  --blue-light: #93c5fd;
+  --blue-pale:  #1e3a5f;
+  --white:      #1e293b;   /* card backgrounds become dark */
+  --bg:         #0f172a;   /* page background becomes very dark */
+  --bg-alt:     #1e293b;
+  --border:     #334155;
+  --text:       #e2e8f0;
+  --muted:      #94a3b8;
+  --shadow:     0 4px 24px rgba(0, 0, 0, 0.4);
+}
+ 
+/* In dark mode, the hero gradient uses darker blues */
+[data-theme="dark"] .hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+}
+[data-theme="dark"] .hero__name{
+  color:#e2e8f0
+
+}
+
+[data-theme="dark"] .hero__role{
+  color:#93c5fd
+}
+ 
+/* In dark mode, the footer stays very dark */
+[data-theme="dark"] .footer {
+  background: #0f172a;
 }

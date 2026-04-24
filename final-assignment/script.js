@@ -175,3 +175,41 @@ cancelBtn.addEventListener("click", () => {
     if (err && err.tagName === "SMALL") err.textContent = "";
   });
 });
+
+
+// ======================5=========================
+//  DARK/ LIGHT MODE TOGGLE
+// =================================================
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon   = document.getElementById('themeIcon');
+const body        = document.body;
+ 
+// Check if the user has a saved theme preference from a previous visit
+const savedTheme = localStorage.getItem('theme') || 'light';
+ 
+// Apply the saved theme immediately when the page loads
+applyTheme(savedTheme);
+ 
+// When the toggle button is clicked, switch to the opposite theme
+themeToggle.addEventListener('click', () => {
+  // Read the current theme and flip it
+  const currentTheme = body.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+ 
+  // Apply the new theme and save it for next time
+  applyTheme(newTheme);
+  localStorage.setItem('theme', newTheme);
+});
+ 
+// Helper function — sets the theme and updates the button icon
+function applyTheme(theme) {
+  body.setAttribute('data-theme', theme);
+ 
+  if (theme === 'dark') {
+    // Show a sun icon in dark mode (clicking it will switch to light)
+    themeIcon.className = 'fa-solid fa-sun';
+  } else {
+    // Show a moon icon in light mode (clicking it will switch to dark)
+    themeIcon.className = 'fa-solid fa-moon';
+  }
+}

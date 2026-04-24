@@ -15,7 +15,7 @@
   <!-- NAVBAR -->
   <header class="navbar" id="top">
     <div class="container navbar__inner">
-      <a href="#top" class="navbar__logo">Portfolio</a>
+      <a href="#top" class="navbar__logo">James Kiprop</a>
       <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -24,20 +24,25 @@
         <a href="#about"     class="navbar__link">About</a>
         <a href="#education" class="navbar__link">Education</a>
         <a href="#contact"   class="navbar__link">Contact</a>
+        <!-- CV download button also placed in the hero section for visibility.-->
+        <a href="cv.pdf" download="James_Kiprop_CV.pdf" class="navbar__cv-btn">
+          <i class="fa-solid fa-file-arrow-down"></i> Download CV
+        </a>
+
+        <button class="navbar__theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
       </nav>
     </div>
   </header>
 
   <main>
 
-    <!-- HERO / PHOTO SECTION — from goup1.html
-         FIX: Removed absolute local path (c:\Users\HomePC\...) for image — use relative path.
-         FIX: Removed absolute local path for CSS — now uses shared styles.css.
-         NOTE: Place your portfolio.png image in the same folder as this file. -->
+
     <section class="hero-section" id="hero">
       <div class="container hero__inner">
         <div class="hero__photo-wrap">
-          <img src="portfolio.png" alt="Photo of James Kiprop" class="hero__photo" />
+          <img src="images/portfolio.png" alt="Photo of James Kiprop" class="hero__photo" />
         </div>
         <div class="hero__text">
           <h1 class="hero__name">James Kiprop</h1>
@@ -49,7 +54,10 @@
             <span class="tag">Python</span>
             <span class="tag">UI/UX Design</span>
             <span class="tag">Project Management</span>
+
           </div>
+          
+
         </div>
       </div>
     </section>
@@ -103,17 +111,13 @@
       </div>
     </section>
 
-    <!-- CONTACT INFO SECTION — from contact.html
-         FIX: Removed full HTML document wrapper (DOCTYPE, head, body tags).
-         FIX: Removed <link rel="stylesheet" href="contact.css"> — styles merged into styles.css.
-         FIX: Renamed classes from .card/.cards-grid to .contact__card/.contact__cards to avoid clashes. -->
     <section class="contact-section" id="contact">
       <div class="container">
         <span class="section-label">Contact</span>
         <h2 class="section-heading">Get In Touch</h2>
         <div class="contact__cards">
 
-          <a class="contact__card" href="mailto:alex.johnson@email.com">
+          <a class="contact__card" href="mailto:james.kiprop@email.com">
             <div class="contact__icon contact__icon--email">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2"/>
@@ -122,11 +126,11 @@
             </div>
             <div>
               <div class="contact__label">Email</div>
-              <div class="contact__value">alex.johnson@email.com</div>
+              <div class="contact__value">james.kiprop@email.com</div>
             </div>
           </a>
 
-          <a class="contact__card" href="tel:+15551234567">
+          <a class="contact__card" href="tel:+254 123 456789">
             <div class="contact__icon contact__icon--phone">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 11.93 19.79 19.79 0 0 1 1.07 3.3 2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16l.92.92z"/>
@@ -134,11 +138,11 @@
             </div>
             <div>
               <div class="contact__label">Phone</div>
-              <div class="contact__value">+1 (555) 123-4567</div>
+              <div class="contact__value">+254 123 456789</div>
             </div>
           </a>
 
-          <a class="contact__card" href="https://linkedin.com/in/alexjohnson" target="_blank" rel="noopener">
+          <a class="contact__card" href="https://linkedin.com/in/jameskiprop" target="_blank" rel="noopener">
             <div class="contact__icon contact__icon--linkedin">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
@@ -148,11 +152,11 @@
             </div>
             <div>
               <div class="contact__label">LinkedIn</div>
-              <div class="contact__value">linkedin.com/in/alexjohnson</div>
+              <div class="contact__value">linkedin.com/in/jameskiprop</div>
             </div>
           </a>
 
-          <a class="contact__card" href="https://github.com/alexjohnson" target="_blank" rel="noopener">
+          <a class="contact__card" href="https://github.com/jameskiprop" target="_blank" rel="noopener">
             <div class="contact__icon contact__icon--github">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
@@ -160,7 +164,7 @@
             </div>
             <div>
               <div class="contact__label">GitHub</div>
-              <div class="contact__value">github.com/alexjohnson</div>
+              <div class="contact__value">github.com/jameskiprop</div>
             </div>
           </a>
 
@@ -168,11 +172,7 @@
       </div>
     </section>
 
-    <!-- DATA CAPTURE FORM — from index.html (Person 5)
-         FIX: Removed full HTML document wrapper.
-         FIX: Removed duplicate stylesheet links already declared in <head>.
-         FIX: Added Cancel button to match assignment requirements.
-         FIX: Added novalidate + JS-handled feedback message. -->
+
     <section class="form-section" id="form">
       <div class="container">
         <span class="section-label">Message</span>
